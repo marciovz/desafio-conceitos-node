@@ -11,7 +11,7 @@ const repositories = [];
 
 /** Rota para listar todos os repositórios */
 app.get("/repositories", (request, response) => {
-  return response.json(repositories);
+  return response.status(200).json(repositories);
 });
 
 /** Rota para criar um novo repositório */
@@ -22,7 +22,7 @@ app.post("/repositories", (request, response) => {
 
   repositories.push(newRepo);
 
-  return response.json(newRepo);
+  return response.status(200).json(newRepo);
 });
 
 /** Rota para alterar um campo de uma determinada rota */
@@ -46,7 +46,7 @@ app.put("/repositories/:id", (request, response) => {
 
   repositories[repoIndex] = repository;
 
-  return response.json(repository);
+  return response.status(200).json(repository);
 
 });
 
@@ -77,7 +77,7 @@ app.post("/repositories/:id/like", (request, response) => {
   
   repositories[repoIndex].likes++;
 
-  return response.json(repositories[repoIndex]);
+  return response.status(200).json(repositories[repoIndex]);
 });
 
 module.exports = app;
