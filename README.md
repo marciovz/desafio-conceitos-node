@@ -26,6 +26,8 @@ O desafio é composto pela construção de um simples servidor com a biblioteca 
 - nodemon: utilizado para inicialização e monitoramento de alterações nos arquivos de código.
 - cors: utilizado para configurar acessos de outros domínios ao servidor.
 
+<br />
+
 ## Instalação do servidor em uma máquina local
 	
 ### 1. Requisitos para instalação
@@ -51,6 +53,8 @@ Clonar a pasta do projeto para sua máquina local e instalar as dependências.
 $ yarn dev
 ```
 
+<br />
+
 ## Usando os serviços
 
 Abaixo temos as linhas de comandos para fazer as requisições através dos comandos curl em seu terminal, mas você também pode utilizar um aplicativo como postman ou insomnia para executar as requisições ao servidor.
@@ -59,25 +63,31 @@ Abaixo temos as linhas de comandos para fazer as requisições através dos coma
 ```bash
 $ curl -H "Content-Type: application/json" -X POST -d '{"title": "desafio2-node", "url": "https://github.com/marciovz/desafio2-conceitos-node", "techs": ["nodeJS"]}' http://localhost:3333/repositories
 ```
+<br />
+
  ### Listar todos repositórios
 ```bash
 $ curl -H "Content-Type: application/json" -X GET http://localhost:3333/repositories
 ```
+<br />
+
  ### Alterar um repositório
->  obs.: troque o id por um id válido.
+>  obs.: troque o PUT-ID por um id válido.
 ```bash
 $ curl -H "Content-Type: application/json" -X PUT -d '{"techs": ["nodeJS", "javascript"]}' http://localhost:3333/repositories/PUT-ID
 ```
+<br />
 
  ### Remover um repositório
->  obs.: troque o id por um id válido.
+>  obs.: troque o PUT-ID por um id válido.
 ```bash
 $ curl -H "Content-Type: application/json" -X DELETE  http://localhost:3333/repositories/PUT-ID
 ```
+<br />
 
  ### Adicionar um like a um repositório
->  obs.: troque o id por um id válido.
+>  obs.: troque o PUT-ID por um id válido.
 ```bash
 $ curl -H "Content-Type: application/json" -X POST  http://localhost:3333/repositories/PUT-ID/like
 ```
-
+<br />
