@@ -3,7 +3,7 @@
 
 # DESAFIO2-NODEJS
 
-## visão geral
+## Visão geral
 Desafio2-nodeJS é um servidor para gerenciamento de listagem de repositórios.
 
 O código é uma resolução do desafio 2 módulo 1 do curso Bootcamp da Rocketseat para aplicação dos conhecimentos inicias sobre nodeJS, em especial os metodos HTTP, roteamento, e tipos de parâmetros em uma requisição.
@@ -26,7 +26,7 @@ O desafio é composto pela construção de um simples servidor com a biblioteca 
 - nodemon: utilizado para inicialização e monitoramento de alterações nos arquivos de código.
 - cors: utilizado para configurar acessos de outros domínios ao servidor.
 
-## Instalação do servidor em máquina local
+## Instalação do servidor em uma máquina local
 	
 ### 1. Requisitos para instalação
 - NodeJS na versão 8 ou superior;
@@ -57,7 +57,7 @@ Abaixo temos as linhas de comandos para fazer as requisições através dos coma
 
  ### Criar um repositório
 ```bash
-$ curl -H "Content-Type: application/json" -X POST -d '{"title": "desafio2-node", "url": "https://github.com/marciovz/desafio2-conceitos-node", "techs": [ "nodeJS"]} http://localhost:3333/repositories
+$ curl -H "Content-Type: application/json" -X POST -d '{"title": "desafio2-node", "url": "https://github.com/marciovz/desafio2-conceitos-node", "techs": ["nodeJS"]}' http://localhost:3333/repositories
 ```
  ### Listar todos repositórios
 ```bash
@@ -66,18 +66,18 @@ $ curl -H "Content-Type: application/json" -X GET http://localhost:3333/reposito
  ### Alterar um repositório
 >  obs.: troque o id por um id válido.
 ```bash
-$ curl -H "Content-Type: application/json" -X PUT -d '{"techs": ["nodeJS", "javascript",]} http://localhost:3333/repositories/put_id
+$ curl -H "Content-Type: application/json" -X PUT -d '{"techs": ["nodeJS", "javascript"]}' http://localhost:3333/repositories/PUT-ID
 ```
 
  ### Remover um repositório
 >  obs.: troque o id por um id válido.
 ```bash
-$ curl -H "Content-Type: application/json" -X DELETE  http://localhost:3333/repositories/put_id
+$ curl -H "Content-Type: application/json" -X DELETE  http://localhost:3333/repositories/PUT-ID
 ```
 
  ### Adicionar um like a um repositório
 >  obs.: troque o id por um id válido.
 ```bash
-$ curl -H "Content-Type: application/json" -X DELETE  http://localhost:3333/repositories/put_id/like
+$ curl -H "Content-Type: application/json" -X POST  http://localhost:3333/repositories/PUT-ID/like
 ```
 
